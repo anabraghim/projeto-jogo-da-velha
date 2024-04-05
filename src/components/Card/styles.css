@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Patua+One&family=Paytone+One&family=Rubik+Doodle+Shadow&display=swap');
+/*font-family: "Patua One", serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Patua+One&family=Paytone+One&family=Roboto+Slab:wght@100..900&family=Rubik+Doodle+Shadow&display=swap');
+/*font-family: "Roboto Slab", serif;*/
+
+:root{
+  --verdeClaro: #6FB961;
+  --verdeMedio: #317D4A;
+  --azulClaro:#298A88;
+  --azulMedio:#2D588D;
+  --azulEscuro: #123838;
+  --amareloClaro: #EBBE53;
+  --branco:#fff;
+}
+div{
+    font-family: "Patua One", serif;
+}
+.cardContent{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform-style: preserve-3d; /*ela ainda é 2d, mas seus filhos são 3d*/
+    transition: transform 800ms ease-in-out; /*o ease-in-out controla a variação 
+    da velocidade, que nesse caso seria devagar-rápido-devagar, além dele tem
+    linear, ease-in (começa devagar e acelera gradualmente), ease-out (começa
+    rápido e desacelera até parar) e cubic-bezier(n,n,n,n) - permite personalizar 
+    curva de velocidade da animação com mais precisão*/
+}
+
+.cardFace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /*torna a face posterior de um elemento 3d invisível*/
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 2px solid var(--branco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.cardFace-Front{
+    background-color: var(--azulClaro);
+    color: white;
+    backface-visibility: hidden;
+}
+
+.cardFace-Back{
+    background-color: var(--azulMedio);
+    color: yellow;
+    text-align: center;
+    text-align-last: center;
+    font-size: 50px;
+    transform: rotateY(180deg);
+
+}
+
+/* .card:hover .cardContent {
+    transform: rotateY(180deg);
+} 
+aqui foi antes de colocar os estados, para testes
+*/ 
+
+/*classe para colocar na tag quando ela estiver invertida*/
+.cardContent-flipped{
+    transform: rotateY(180deg);
+}

@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Patua+One&family=Paytone+One&family=Rubik+Doodle+Shadow&display=swap');
+/*font-family: "Patua One", serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Patua+One&family=Paytone+One&family=Roboto+Slab:wght@100..900&family=Rubik+Doodle+Shadow&display=swap');
+/*font-family: "Roboto Slab", serif;*/
+
+:root{
+  --verdeClaro: #6FB961;
+  --verdeMedio: #317D4A;
+  --azulClaro:#298A88;
+  --azulMedio:#2D588D;
+  --azulEscuro: #123838;
+  --amareloClaro: #EBBE53;
+  --branco:#fff;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    height: 100px;
+    width: 100px;
+}
+
+.textos{
+    margin-top: 20px;
+    font-family: "Patua One", serif;
+    color: var(--branco);
+}
